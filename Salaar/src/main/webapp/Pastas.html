@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <style>
+ body{
+ background-image: url("https://thumbs.dreamstime.com/b/set-pasta-dark-background-italian-food-frame-place-text-logo-65683462.jpg");
+  	 background-repeat: no-repeat;
+  	 background-attachment: fixed;
+     background-size:100% 100%;
+     }
+        .line-container {
+            position: relative;
+            width: 1500px;
+            top: 0;
+            height: 2px; 
+            background-color: white; 
+        }
+        .container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around; 
+        }
+        .card {
+        
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+        .card-img{
+        	width:300px;
+            height: 200px; /* Set the desired height of the image */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            border-radius: 5px;
+        }
+
+        /* Card title styling */
+        .card h2 {
+            color: #333;
+        }
+
+        /* Card content styling */
+        .card p {
+            color: #666;
+        }
+        .card .price-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .card .price-container p {
+            color: #666;
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+          .small-box {
+            width: 50%;
+            height: 30px;
+            background-color: white;
+            border: 1px solid #999;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Optional: Style for the text */
+        .small-box p {
+            margin: 0; /* Remove default margin for <p> element */
+            font-size: 16px; /* Adjust font size as needed */
+            font-weight: bold; /* Optional: Make the text bold */
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #504a48;/* Change the button color to brown */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: right; /* Align the button text to the left */
+        }
+
+        /* Add some styling for a button inside the card */
+        .card button {
+            padding: 10px;
+            background-color: #504a48;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            margin-top: 10px;
+        }
+        label {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    input[name="quantity"] {
+        width: 45px;
+        height:20px; /* Adjust the width as needed */
+        margin-top: 5px;
+        font-weight: bold;
+    }
+    #cartSection {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #cartItemsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+    
+        
+    </style>
+</head>
+<body><center>
+<h1 style="color: yellow;">PASTA & NOODLES</h1>
+</center>
+<a href="category.html" class="back-button">Back</a>
+ <div class="line-container">
+ 
+ 
+<div class="container">
+ <div class="card">
+ 		<img class="card-img" src="https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy,g_faces,h_200,q_auto:low/SFS_Farfalle_and_Cannellini_Beans_with_Snow_Peas__Salmon__Crispy_Capers_and_Dill_2_xvombk">
+        <h2>Farfalle and Cannellini Beans with Snow Peas</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.2500</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity1" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Farfalle and Cannellini Beans with Snow Peas', 2500, 'quantity1')">Add to Cart</button>
+    </div>
+ </div>
+ <div class="card">
+    <img class="card-img" src="https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy,g_faces,h_200,q_auto:low/SFS_ShanghaiScallionOilNoodles-30_xt5w6n">
+    <h2>Shanghai Scallion Oil Noodles</h2>
+    <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.3500</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity2" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Shanghai Scallion Oil Noodles', 3500, 'quantity2')">Add to Cart</button>
+    </div>
+    
+</div>
+  
+<div class="card">
+ 		<img class="card-img" src="https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy,g_faces,h_200,q_auto:low/SFS_SpaghettiAglioOlioForTwo_40_nzwa5k">
+        <h2>Spaghetti Aglio E Olio</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity3" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Spaghetti Aglio E Olio', 5000, 'quantity3')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy,g_faces,h_200,q_auto:low/SFS_SpaghettiAndClams-70_qrtpit">
+        <h2>Spaghetti with Clams</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity4" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Spaghetti with Clams', 5000, 'quantity4')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy,g_faces,h_200,q_auto:low/SFS_MusselsLinguineNdujaCreamSauce-8_iwclhq" style="clear:both";>
+        <h2>Mussels and Linguine</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.8000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity5" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Mussels and Linguine', 8000, 'quantity5')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy,g_faces,h_200,q_auto:low/SFS_Pasta_e_Fagioli_408_vsiabb" style="clear:both";>
+        <h2>Pasta e Fagioli </h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity6" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Pasta e Fagioli ', 5000, 'quantity6')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy,g_faces,h_200,q_auto:low/SFS_Mi%CC%80_Xa%CC%80o_Gio%CC%80n_Vietnamese_Pan-Fried_Noodles_4_speo3j" style="clear:both";>
+        <h2>Pan-Fried Noodles</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.9000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity7" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Pan-Fried Noodles', 9000, 'quantity7')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy,g_faces,h_200,q_auto:low/SFS_Pici_alla_Boscaiola_kkqaup" style="clear:both";>
+        <h2>Handmade Pasta with Mushrooms and Sausage</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity8" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Handmade Pasta with Mushrooms and Sausage', 5000, 'quantity8')">Add to Cart</button>
+    </div>
+</div>
+        
+<div class="card">
+ 		<img class="card-img" src="https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy,g_faces,h_200,q_auto:low/SFS_tagliatelle_with_bolognese-22_tovequ" style="clear:both";>
+        <h2>Margherita Pasta</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.3000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity9" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Margherita Pasta', 3000, 'quantity9')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy,g_faces,h_200,q_auto:low/SFS_tagliatelle_with_bolognese-22_tovequ" style="clear:both";>
+        <h2>Pittsburgh-Style Haluski</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity10" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Pittsburgh-Style Haluski', 5000, 'quantity10')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy,g_faces,h_200,q_auto:low/SFS_BowtiesCreamyCarrotSauceItalianSausage-24_eyu3ro" style="clear:both";>
+        <h2>Bowties with Creamy Carrot Sauce </h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.9000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity11" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Bowties with Creamy Carrot Sauce ', 9000, 'quantity11')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy,g_faces,h_200,q_auto:low/SFS_Rotini_with_Spicy_Red_Lentils_Tomatoes_and_Goat_Cheese_1_xsinr4" style="clear:both";>
+        <h2>Creamy, Spicy Rotini and Red Lentils </h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.500</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity12" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Creamy, Spicy Rotini and Red Lentils ', 500, 'quantity12')">Add to Cart</button>
+    </div>
+</div>
+        
+        
+ </div>
+  <div id="cartSection">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItemsList"></ul>
+    </div>
+
+<script>
+        function addToCart(itemName, itemPrice, quantityId) {
+            const quantity = document.getElementById(quantityId).value;
+            const totalPrice = itemPrice * quantity;
+
+            let cartData = sessionStorage.getItem('cartData');
+            if (!cartData) {
+                cartData = [];
+            } else {
+                cartData = JSON.parse(cartData);
+            }
+
+            cartData.push({ name: itemName, price: totalPrice, quantity: quantity });
+            sessionStorage.setItem('cartData', JSON.stringify(cartData));
+
+            // Update the displayed cart items
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItemsList = document.getElementById('cartItemsList');
+            const cartData = sessionStorage.getItem('cartData');
+
+            if (cartData) {
+                const parsedCartData = JSON.parse(cartData);
+                cartItemsList.innerHTML = '';
+
+                parsedCartData.forEach(item => {
+                    const cartItem = document.createElement('li');
+                    cartItem.textContent =`${item.name} - Quantity: ${item.quantity}, Total Price: Rs.${item.price}`;
+                    cartItemsList.appendChild(cartItem);
+                });
+            }
+        }
+
+        // Initial update to display any existing cart items
+        updateCartDisplay();
+    </script>
+</body>
+</html>

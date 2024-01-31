@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Page</title>
+  <style>
+    body {
+      background-image: url("https://media.istockphoto.com/id/1400648198/photo/interior-of-empty-modern-cafe-or-restaurant-during-the-day-round-tables-and-yellow-chairs-in.webp?b=1&s=170667a&w=0&k=20&c=PEOXIGWfnNHsVnPF3vojqMzTlSDRpE1uhOdPj7e3Z4g=");
+  	 background-repeat: no-repeat;
+  	 background-attachment: fixed;
+     background-size:100% 100%;
+      font-family: Arial, sans-serif;
+      background-color: rgb(128, 255, 0);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .signup-container {
+      background-color:#fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      height:auto;
+      width:400px;
+    }
+
+    .signup-container h2 {
+      text-align: center;
+    }
+
+    .signup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .signup-button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .back-button {
+            
+            padding: 10px 20px;
+            background-color: #8B4513; 
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center; 
+        }
+
+    .signup-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="signup-container">
+    <h2>Signup</h2>
+    <form class="signup-form"  method="post" action="RegisterServlet" >
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Number:</label>
+        <input type="text" id="phone_no" name="phone_no" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+      </div>
+
+      <div class="form-group">
+        <label for="street">Street:</label>
+        <input type="text" id="street" name="street" required>
+      </div>
+
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required>
+      </div>
+
+      <div class="form-group">
+        <label for="district">District:</label>
+        <input type="text" id="district" name="district" required>
+      </div>
+
+      <button  type="submit" class="signup-button" href="category.html">Create Account</button>
+      <center><p >Already have an account?</p></center>
+<center> <a  href="login.html">Login</a></center>
+<a href="first.html" class="back-button">Back to Home</a>
+    </form>
+  </div>
+
+</body>
+</html>

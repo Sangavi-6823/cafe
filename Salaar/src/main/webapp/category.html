@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+    body {
+    background-image: url("https://www.foodbusinessnews.net/ext/resources/2020/4/CoupleAtRestaurant_Lead.jpg?height=635&t=1587991293&width=1200");
+  	 background-repeat: no-repeat;
+  	 background-attachment: fixed;
+     background-size:100% 100%;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-blend-mode: color rgb(138, 138, 175);
+    }
+      .head {
+      position: absolute;
+      top: 0px; 
+      left: 60px; 
+      text-align:center;
+      font-family: 'Comic Sans MS', cursive;
+      font-size:20px;
+    }
+
+    .category-img{
+    float:left;
+    border-radius: 100%;
+    width: 160px;
+    box-shadow: 0px 5px 4px #18283f75;
+    margin:right;
+    }
+    #cartButton {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #007BfF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8B4513; /* Change the button color to brown */
+            text-decoration: none;
+            border-radius: 5px;
+            color: #fff;
+
+            margin-top: 20px;
+            text-align: center; /* Align the button text to the left */
+        }
+        
+        #cartSection {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        
+  </style>
+</head>
+<body>
+<div class="head">
+<h2 style="color:white;">SHOPPIE!!!</h2><h1 style="color:white;" ><br>Category</h1>
+</div>
+ <br>
+ 
+    	
+        <br>
+    	<div class="category">
+    <ul style="list-style-type: none; margin: 0; padding: 100px;">
+        <li style="float: left; width: 15%; margin: 9px 80px 50px 120px;">
+            <a onclick="GAShopByCategorySource()" href="Pastas.html">
+                <img class="category-img" alt="" src="https://img.taste.com.au/lsUEAVpp/taste/2017/05/salsiccia-ragu-with-pappardelle-126296-1.jpg" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px; border: 3px solid white;">
+
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 50px;">PASTAS & NOODLES</span>
+            </a>
+        </li>
+        <li style="float: left; width: 15%; margin: 9px 80px 5px 10px;">
+            <a onclick="GAShopByCategorySource()" href="burger.html">
+                <img class="category-img" alt="" src="https://tse2.mm.bing.net/th?id=OIP.AvZvu4T_yjgYV4Cce27g5wHaE6&pid=Api&P=0&h=180" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px;border: 3px solid white;">
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 20px;">BURGERS</span>
+            </a>
+        </li>
+         <li style="float: left; width: 15%; margin: 9px 80px 5px 10px;">
+            <a onclick="GAShopByCategorySource()" href="ice.html">
+                <img class="category-img" alt="" src="https://tse4.mm.bing.net/th?id=OIP.GVD1RR1IDJL2o43X615tkQHaEK&pid=Api&P=0&h=180" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px;border: 3px solid white;">
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 70px;">ICECREAMS</span>
+            </a>
+        </li>
+        <li style="float: left; width: 15%; margin: 9px 80px 5px 10px;">
+            <a onclick="GAShopByCategorySource()" href="Drinks.html">
+                <img class="category-img" alt="" src="https://tse3.mm.bing.net/th?id=OIP.mKHq2duqOV1Ke9Ovk0l6EAAAAA&pid=Api&P=0&h=180" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px;border: 3px solid white;">
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 60px;">JUICE & COFFEE</span>
+            </a>
+        </li>
+        
+         <li style="float: left; width: 15%; margin: 9px 80px 50px 120px;clear: both;">
+            <a onclick="GAShopByCategorySource()" href="Cakes.html">
+                <img class="category-img" alt="" src="https://tse1.mm.bing.net/th?id=OIP.mHUFYsUB__RT-jbi8jJoGgHaEj&pid=Api&P=0&h=180" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px;border: 3px solid white;">
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 40px;">CAKEZONE</span>
+            </a>
+        </li>
+         <li style="float: left; width: 15%; margin: 9px 80px 5px 10px;">
+            <a onclick="GAShopByCategorySource()" href="bread.html">
+                <img class="category-img" alt="" src="https://tse4.mm.bing.net/th?id=OIP.0cCuddA5oJQpHa4J3AQ0RAHaEo&pid=Api&P=0&h=180" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px;border: 3px solid white;">
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 50px;">ArtisanalBreads</span>
+            </a>
+        </li>
+         <li style="float: left; width: 15%; margin: 9px 80px 5px 10px;">
+            <a onclick="GAShopByCategorySource()" href="Pizzas.html">
+                <img class="category-img" alt="" src="https://tse3.mm.bing.net/th?id=OIP.ZZsn6lD6PCjocBzx1tuu1QHaEo&pid=Api&P=0&h=180" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px;border: 3px solid white;">
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 50px;">PIZZA HUT</span>
+            </a>
+        </li>
+         <li style="float: left; width: 15%; margin: 9px 80px 5px 10px;">
+            <a onclick="GAShopByCategorySource()" href="chocolate.html">
+                <img class="category-img" alt="" src="https://tse3.mm.bing.net/th?id=OIP.7yIVVH29tBGnnxze22mmMQHaE8&pid=Api&P=0&h=180" style="float: left; border-radius: 100%; width: 160px; box-shadow: 0px 5px 4px #18283f75; margin-left: 10px;border: 3px solid white;">
+                <span style="font-size: 15px; color: white; font-family: CeraPRO-Medium; margin-left: 50px;">CHOCO HUB</span>
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    	
+    </div>
+  
+    </li>
+    </ul>
+    
+        <button>
+        <a href="first.html" class="back-button">Back to Home</a>
+    </button>    
+   
+
+<button id="cartButton" onclick="shopNow()">Shopping Cart</button>
+<script>
+    
+
+function shopNow() {
+    // Add your logic here to redirect to the shopping page or perform any other action
+    //alert("Your order succssfully")
+    window.location.href="cart.html";
+}
+
+
+</script>
+    </body>
+    </html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <style>
+ body{
+ background-image: url("https://tse3.mm.bing.net/th?id=OIP.mdCJbTU02ADeAiZFdSABuwHaEo&pid=Api&P=0&h=180");
+  	 background-repeat: no-repeat;
+  	 background-attachment: fixed;
+     background-size:100% 100%;
+     }
+        .line-container {
+            position: relative;
+            width: 1500px;
+            top: 0;
+            height: 2px; 
+            background-color: white; 
+        }
+        .container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around; 
+        }
+        .card {
+        
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+        .card-img{
+        	width:300px;
+            height: 200px; /* Set the desired height of the image */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            border-radius: 5px;
+        }
+
+        /* Card title styling */
+        .card h2 {
+            color: #333;
+        }
+
+        /* Card content styling */
+        .card p {
+            color: #666;
+        }
+        .card .price-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .card .price-container p {
+            color: #666;
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+          .small-box {
+            width: 50%;
+            height: 30px;
+            background-color: white;
+            border: 1px solid #999;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Optional: Style for the text */
+        .small-box p {
+            margin: 0; /* Remove default margin for <p> element */
+            font-size: 16px; /* Adjust font size as needed */
+            font-weight: bold; /* Optional: Make the text bold */
+        }
+
+        /* Add some styling for a button inside the card */
+        .card button {
+            padding: 10px;
+            background-color: #504a48;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            margin-top: 10px;
+        }
+        label {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    input[name="quantity"] {
+        width: 45px;
+        height:20px; /* Adjust the width as needed */
+        margin-top: 5px;
+        font-weight: bold;
+    }
+    #cartSection {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #cartItemsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3b3837;/* Change the button color to brown */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: right; /* Align the button text to the left */
+        }
+    
+        
+    </style>
+</head>
+<body><center>
+<h1 style="color:rgb(15, 15, 15);">JUICE & COFFEE</h1>
+</center>
+<a href="category.html" class="back-button">Back</a>
+ <div class="line-container">
+ 
+ 
+<div class="container">
+ <div class="card">
+ 		<img class="card-img" src="https://5.imimg.com/data5/LT/XB/MY-28787720/pineapple-drink-500x500.jpg">
+        <h2>Pineapple Juice</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.2500</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity1" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Pineapple Juice', 2500, 'quantity1')">Add to Cart</button>
+    </div>
+ </div>
+ <div class="card">
+    <img class="card-img" src="https://cdn.pixabay.com/photo/2023/04/13/21/14/ai-generated-7923488_640.jpg">
+    <h2>Orange Juice</h2>
+    <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.3500</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity2" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Orange Juice', 3500, 'quantity2')">Add to Cart</button>
+    </div>
+    
+</div>
+  
+<div class="card">
+ 		<img class="card-img" src="https://media.istockphoto.com/id/904617420/photo/fresh-mango-smoothie-in-the-glass.jpg?s=612x612&w=0&k=20&c=ogIRn5AfahJNU4W8UmQIZ-mJqL9tgOm9yH_-5WJmkSQ=">
+        <h2>Mango Juice</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity3" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Mango Juice', 5000, 'quantity3')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://media.istockphoto.com/id/178416773/photo/some-glasses-with-strawberry-liqueur.jpg?s=612x612&w=0&k=20&c=wo7eqLKBOV-FQZ15Lo7A3RMLPAdvwbkVPqlZm_GM9pc=">
+        <h2>Strawberry Juice</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity4" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Strawberry Juice', 5000, 'quantity4')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://img.freepik.com/free-photo/front-close-view-natural-fresh-detox-water-served-with-tube-mint-orange-brown-background_140725-94480.jpg?size=626&ext=jpg&ga=GA1.1.2116175301.1701388800&semt=ais" style="clear:both";>
+        <h2>Lemon Juice </h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.8000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity5" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Lemon Juice ', 8000, 'quantity5')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://images.healthshots.com/healthshots/en/uploads/2023/11/24075219/pomegranate-juice.jpg" style="clear:both";>
+        <h2>Pomegranate juice</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity6" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Pomegranate juice', 5000, 'quantity6')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://t3.ftcdn.net/jpg/01/59/18/36/360_F_159183621_0YTKAAqAA7GI7DlCBfYJ2wfKbC6Zf30V.jpg" style="clear:both";>
+        <h2>Americano</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.9000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity7" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Americano', 9000, 'quantity7')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://media.istockphoto.com/id/1303583671/photo/cup-glass-of-coffee-with-smoke-and-coffee-beans-on-old-wooden-background.webp?b=1&s=612x612&w=0&k=20&c=7UiCQYl4j3J-1hWbtVUXEP4dC0GP6sbDhIEfUkTX1jE=" style="clear:both";>
+        <h2>Espresso</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity8" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Espresso', 5000, 'quantity8')">Add to Cart</button>
+    </div>
+</div>
+        
+<div class="card">
+ 		<img class="card-img" src="https://bachelorrecipe.com/wp-content/uploads/2017/09/espresso.jpg" style="clear:both";>
+        <h2>Macchiato</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.3000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity9" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Macchiato', 3000, 'quantity9')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://img.freepik.com/premium-photo/espresso-cappuccino-profession-coffee-maker-machine_898572-8.jpg" style="clear:both";>
+        <h2>Doppio</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity10" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Doppio', 5000, 'quantity10')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://www.everydaycheapskate.com/wp-content/uploads/cold-brew-iced-coffee-cropped.jpg" style="clear:both";>
+        <h2>Cold Brew Iced Coffee </h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.9000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity11" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Cold Brew Iced Coffee ', 9000, 'quantity11')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://diethood.com/wp-content/uploads/2022/07/cortado-2.jpg" style="clear:both";>
+        <h2>Cardato</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.500</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity12" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Cardato', 500, 'quantity12')">Add to Cart</button>
+    </div>
+</div>
+        
+        
+ </div>
+  <div id="cartSection">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItemsList"></ul>
+    </div>
+
+<script>
+        function addToCart(itemName, itemPrice, quantityId) {
+            const quantity = document.getElementById(quantityId).value;
+            const totalPrice = itemPrice * quantity;
+
+            let cartData = sessionStorage.getItem('cartData');
+            if (!cartData) {
+                cartData = [];
+            } else {
+                cartData = JSON.parse(cartData);
+            }
+
+            cartData.push({ name: itemName, price: totalPrice, quantity: quantity });
+            sessionStorage.setItem('cartData', JSON.stringify(cartData));
+
+            // Update the displayed cart items
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItemsList = document.getElementById('cartItemsList');
+            const cartData = sessionStorage.getItem('cartData');
+
+            if (cartData) {
+                const parsedCartData = JSON.parse(cartData);
+                cartItemsList.innerHTML = '';
+
+                parsedCartData.forEach(item => {
+                    const cartItem = document.createElement('li');
+                    cartItem.textContent =`${item.name} - Quantity: ${item.quantity}, Total Price: Rs.${item.price}`;
+                    cartItemsList.appendChild(cartItem);
+                });
+            }
+        }
+
+        // Initial update to display any existing cart items
+        updateCartDisplay();
+    </script>
+</body>
+</html>U

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <style>
+ body{
+ background-image: url("https://c.stocksy.com/a/ChjB00/z9/2797266.jpg");
+  	 background-repeat: no-repeat;
+  	 background-attachment: fixed;
+     background-size:100% 100%;
+     }
+        .line-container {
+            position: relative;
+            width: 1500px;
+            top: 0;
+            height: 2px; 
+            background-color: white; 
+        }
+        .container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around; 
+        }
+        .card {
+        
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+        .card-img{
+        	width:300px;
+            height: 200px; /* Set the desired height of the image */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            border-radius: 5px;
+        }
+
+        /* Card title styling */
+        .card h2 {
+            color: #333;
+        }
+
+        /* Card content styling */
+        .card p {
+            color: #666;
+        }
+        .card .price-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .card .price-container p {
+            color: #666;
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+          .small-box {
+            width: 50%;
+            height: 30px;
+            background-color: white;
+            border: 1px solid #999;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Optional: Style for the text */
+        .small-box p {
+            margin: 0; /* Remove default margin for <p> element */
+            font-size: 16px; /* Adjust font size as needed */
+            font-weight: bold; /* Optional: Make the text bold */
+        }
+
+        /* Add some styling for a button inside the card */
+        .card button {
+            padding: 10px;
+            background-color: #a54917;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            margin-top: 10px;
+        }
+        label {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    input[name="quantity"] {
+        width: 45px;
+        height:20px; /* Adjust the width as needed */
+        margin-top: 5px;
+        font-weight: bold;
+    }
+    #cartSection {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #cartItemsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+    
+  .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3b3837;/* Change the button color to brown */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: right; /* Align the button text to the left */
+        }
+        
+    </style>
+</head>
+<body><center>
+<h1 style="color:rgb(153, 73, 13);">CAKES</h1>
+</center>
+<a href="category.html" class="back-button">Back</a>
+ <div class="line-container">
+ 
+ 
+<div class="container">
+ <div class="card">
+ 		<img class="card-img" src="https://tse3.mm.bing.net/th?id=OIP.Oivhh2gAHK3ZjB3AlrGt3wHaIu&pid=Api&P=0&h=180">
+        <h2>Amandine</h2>
+        <div class="price-container">
+          <p>1Kg</p>
+          <div class="small-box">
+              <p>Rs.2500</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity1" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Amandine', 2500, 'quantity1')">Add to Cart</button>
+    </div>
+ </div>
+ <div class="card">
+    <img class="card-img" src="https://tse2.mm.bing.net/th?id=OIP.kZUHYhayt7xcNPOlapRCnQHaE8&pid=Api&P=0&h=180">
+    <h2>Amygdalopita</h2>
+    <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.3500</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity2" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Amygdalopita', 3500, 'quantity2')">Add to Cart</button>
+    </div>
+    
+</div>
+  
+<div class="card">
+ 		<img class="card-img" src="https://tse4.mm.bing.net/th?id=OIP.JTaKHjg5BR1F0jlDVFYhSgHaEo&pid=Api&P=0&w=300&h=300">
+        <h2>Berlingozzo</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity3" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Berlingozzo', 5000, 'quantity3')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://tse4.mm.bing.net/th?id=OIP.ux7RzntYu45ghnRW5sK-MAHaE8&pid=Api&P=0&w=300&h=300">
+        <h2>Cassata</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity4" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Cassata', 5000, 'quantity4')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://i.pinimg.com/originals/fd/63/ed/fd63edda0984f925c5717e4a80e1d00c.jpg" style="clear:both";>
+        <h2>Buster Bar</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.8000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity5" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Buster Bar', 8000, 'quantity5')">Add to Cart</button>
+    </div>
+</div>
+         <div class="card">
+ 		<img class="card-img" src="https://3.bp.blogspot.com/-B1cEYtIwERI/UchGFNKMnCI/AAAAAAAAChs/AHarsDUGTJw/s1600/Cakes-Wallpapers-HD-28.jpg" style="clear:both";>
+        <h2>Pavlova</h2>
+        <div class="price-container">
+          <p>1KG</p>
+          <div class="small-box">
+              <p>Rs.9000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity7" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Pavlova', 9000, 'quantity7')">Add to Cart</button>
+    </div>
+</div>
+        
+ </div>
+  <div id="cartSection">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItemsList"></ul>
+    </div>
+
+<script>
+        function addToCart(itemName, itemPrice, quantityId) {
+            const quantity = document.getElementById(quantityId).value;
+            const totalPrice = itemPrice * quantity;
+
+            let cartData = sessionStorage.getItem('cartData');
+            if (!cartData) {
+                cartData = [];
+            } else {
+                cartData = JSON.parse(cartData);
+            }
+
+            cartData.push({ name: itemName, price: totalPrice, quantity: quantity });
+            sessionStorage.setItem('cartData', JSON.stringify(cartData));
+
+            // Update the displayed cart items
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItemsList = document.getElementById('cartItemsList');
+            const cartData = sessionStorage.getItem('cartData');
+
+            if (cartData) {
+                const parsedCartData = JSON.parse(cartData);
+                cartItemsList.innerHTML = '';
+
+                parsedCartData.forEach(item => {
+                    const cartItem = document.createElement('li');
+                    cartItem.textContent =`${item.name} - Quantity: ${item.quantity}, Total Price: Rs.${item.price}`;
+                    cartItemsList.appendChild(cartItem);
+                });
+            }
+        }
+
+        // Initial update to display any existing cart items
+        updateCartDisplay();
+    </script>
+</body>
+</html>

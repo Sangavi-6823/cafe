@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Example</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        #cartSection {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            max-width: 300px;
+            width: 100%;
+            z-index: 1;
+        }
+
+        #cartItemsList {
+            list-style: none;
+            padding: 0;
+        }
+
+        #cartItemsList li {
+            margin-bottom: 10px;
+            padding: 25px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            width:800px;
+            margin-left:420px;
+        }
+
+        #cartItemsList li:hover {
+            background-color: #e2e2e2;
+        }
+
+        .item-name {
+            color: #333;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .item-quantity {
+            color: #555;
+        }
+
+        .item-total {
+            color: #e44d26;
+            font-weight: bold;
+        }
+
+        #shopNowButton {
+            background-color: #e44d26;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 200px;
+            margin-left:750px;
+            transition: background-color 0.3s ease;
+        }
+
+        #shopNowButton:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div class="cartSection">
+    <center> <h1>Shopping Cart</h1></center>
+    <ul id="cartItemsList"></ul>
+    <button id="shopNowButton" onclick="shopNow()">Shop Now</button>
+</div>
+
+<script>
+function updateCartDisplay() {
+    const cartItemsList = document.getElementById('cartItemsList');
+    const cartData = sessionStorage.getItem('cartData');
+    let totalOrderAmount = 0;
+
+    if (cartData) {
+        const parsedCartData = JSON.parse(cartData);
+        cartItemsList.innerHTML = '';
+
+        parsedCartData.forEach(item => {
+            const cartItem = document.createElement('li');
+            const totalAmount = item.quantity * item.price;
+            totalOrderAmount += totalAmount;
+
+            cartItem.innerHTML = `
+                <div class="item-details">
+                    <div class="item-name">${item.name}</div>
+                    <div class="item-quantity">Quantity: ${item.quantity}</div>
+                </div>
+                <div class="item-total">Total Price: Rs.${totalAmount}</div>
+            `;
+
+            cartItemsList.appendChild(cartItem);
+        });
+    }
+
+    // Display the total order amount
+    const totalOrderElement = document.createElement('li');
+    totalOrderElement.textContent = `Total Order Amount: Rs.${totalOrderAmount}`;
+    cartItemsList.appendChild(totalOrderElement);
+}
+
+function toggleCart() {
+    const cartSection = document.getElementById('cartSection');
+    cartSection.style.display = (cartSection.style.display === 'none' || cartSection.style.display === '') ? 'block' : 'none';
+}
+
+// Function to handle the "Shop Now" button click
+function shopNow() {
+    // Add your logic here to redirect to the shopping page or perform any other action
+    alert("Your order successfully");
+}
+
+// Initial update to display any existing cart items
+updateCartDisplay();
+</script>
+
+</body>
+</html>

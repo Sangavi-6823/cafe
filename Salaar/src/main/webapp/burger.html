@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <style>
+ body{
+ background-image: url("https://media.istockphoto.com/id/876854248/vector/pattern-with-gray-and-red-burgers-on-black-background.jpg?s=612x612&w=0&k=20&c=Qix06JkxR4WQN3JwFcK5Rhj92BRBLNbrUlPMxBuv3Hk=");
+  	 background-repeat: no-repeat;
+  	 background-attachment: fixed;
+     background-size:100% 100%;
+     }
+        .line-container {
+            position: relative;
+            width: 1500px;
+            top: 0;
+            height: 2px; 
+            background-color: white; 
+        }
+        .container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-around; 
+        }
+        .card {
+        
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+        .card-img{
+        	width:300px;
+            height: 200px; /* Set the desired height of the image */
+            object-fit: cover; /* Maintain aspect ratio and cover the container */
+            border-radius: 5px;
+        }
+
+        /* Card title styling */
+        .card h2 {
+            color: #333;
+        }
+
+        /* Card content styling */
+        .card p {
+            color: #666;
+        }
+        .card .price-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .card .price-container p {
+            color: #666;
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+          .small-box {
+            width: 50%;
+            height: 30px;
+            background-color: white;
+            border: 1px solid #999;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Optional: Style for the text */
+        .small-box p {
+            margin: 0; /* Remove default margin for <p> element */
+            font-size: 16px; /* Adjust font size as needed */
+            font-weight: bold; /* Optional: Make the text bold */
+        }
+
+        /* Add some styling for a button inside the card */
+        .card button {
+            padding: 10px;
+            background-color: #504a48;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+            margin-top: 10px;
+        }
+        label {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    input[name="quantity"] {
+        width: 45px;
+        height:20px; /* Adjust the width as needed */
+        margin-top: 5px;
+        font-weight: bold;
+    }
+    #cartSection {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #cartItemsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+    
+  .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #504a48;/* Change the button color to brown */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: right; /* Align the button text to the left */
+        }
+        
+    </style>
+</head>
+<body><center>
+<h1 style="color:rgb(255, 0, 0);">BURGER</h1></center>
+<a href="category.html" class="back-button">Back</a>
+
+ <div class="line-container">
+ 
+ 
+<div class="container">
+ <div class="card">
+ 		<img class="card-img" src="https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D">
+        <h2>Avalanche burger</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.2500</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity1" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Avalanche burge', 2500, 'quantity1')">Add to Cart</button>
+    </div>
+ </div>
+ 
+  
+<div class="card">
+ 		<img class="card-img" src="https://t4.ftcdn.net/jpg/02/74/99/01/360_F_274990113_ffVRBygLkLCZAATF9lWymzE6bItMVuH1.jpg">
+        <h2>Burger dungeon</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity3" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Burger dungeon', 5000, 'quantity3')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://t4.ftcdn.net/jpg/02/44/61/19/360_F_244611927_yrh0ZIYwOGTDurVnCMAt7Cq8DR4sBkB0.jpg">
+        <h2>Burgerlords</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity4" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Burgerlords', 5000, 'quantity4')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://tse3.mm.bing.net/th?id=OIP.3_KdfcaAHdFna5eBbL_VuwHaHa&pid=Api&P=0&h=180";>
+        <h2>Margherita burger</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.9000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity7" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Margherita burger', 9000, 'quantity7')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://tse1.mm.bing.net/th?id=OIP.YHgBVUiC4JtBMRGG3vRTjQHaE8&pid=Api&P=0&h=180" style="clear:both";>
+        <h2>Euphoria burger</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity8" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Euphoria burger', 5000, 'quantity8')">Add to Cart</button>
+    </div>
+</div>
+        
+<div class="card">
+ 		<img class="card-img" src="https://cdn.pixabay.com/photo/2023/10/20/17/30/hamburger-8329939_1280.jpg" style="clear:both";>
+        <h2>Au Cheval</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.3000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity9" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Au Cheval', 3000, 'quantity9')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://media.istockphoto.com/id/652832752/photo/fried-chicken-burger.jpg?s=612x612&w=0&k=20&c=EendRCleaNpkKOUiOplgStACHh_8IyHYzjbzcByGC_4=" style="clear:both";>
+        <h2>Pepperoni burger</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity10" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Pepperoni burger', 5000, 'quantity10')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://images.pexels.com/photos/5474836/pexels-photo-5474836.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" style="clear:both";>
+        <h2>Whataburger/h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.9000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity11" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Whataburger', 9000, 'quantity11')">Add to Cart</button>
+    </div>
+</div>
+<div class="card">
+ 		<img class="card-img" src="https://media.istockphoto.com/id/1248306530/photo/vegan-falafel-burger-with-vegetables-and-sauce-dark-background-copy-space-healthy-plant-based.jpg?s=612x612&w=0&k=20&c=QafGTsgiYLPWD9PU-cF2JEDlxjY1fNeGhi7N15-2v7o=" style="clear:both";>
+        <h2>Meat the Flockers</h2>
+        <div class="price-container">
+          <p>1pk</p>
+          <div class="small-box">
+              <p>Rs.5000</p>
+          </div>
+    </div>               
+    <div>
+        <label for="quantity">Qty:</label>
+        <input type="number" id="quantity12" name="quantity" min="1" value="1">
+        <button onclick="addToCart('Meat the Flockers', 5000, 'quantity12')">Add to Cart</button>
+    </div>
+</div>
+        
+        
+ </div>
+  <div id="cartSection">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItemsList"></ul>
+    </div>
+
+<script>
+        function addToCart(itemName, itemPrice, quantityId) {
+            const quantity = document.getElementById(quantityId).value;
+            const totalPrice = itemPrice * quantity;
+
+            let cartData = sessionStorage.getItem('cartData');
+            if (!cartData) {
+                cartData = [];
+            } else {
+                cartData = JSON.parse(cartData);
+            }
+
+            cartData.push({ name: itemName, price: totalPrice, quantity: quantity });
+            sessionStorage.setItem('cartData', JSON.stringify(cartData));
+
+            // Update the displayed cart items
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItemsList = document.getElementById('cartItemsList');
+            const cartData = sessionStorage.getItem('cartData');
+
+            if (cartData) {
+                const parsedCartData = JSON.parse(cartData);
+                cartItemsList.innerHTML = '';
+
+                parsedCartData.forEach(item => {
+                    const cartItem = document.createElement('li');
+                    cartItem.textContent =`${item.name} - Quantity: ${item.quantity}, Total Price: Rs.${item.price}`;
+                    cartItemsList.appendChild(cartItem);
+                });
+            }
+        }
+
+        // Initial update to display any existing cart items
+        updateCartDisplay();
+    </script>
+</body>
+</html>
